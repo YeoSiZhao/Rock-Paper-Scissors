@@ -7,16 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="
+    <div class="main">
+        <button class="button" onclick="
         playGame('Rock')
-        "> Rock </button>
-    <button onclick="
+        "> <img src="Images/rock.jpg" class="image"> </button>
+    <button class="button" onclick="
         playGame('Scissors')
-        "> Scissors </button>
-    <button onclick="
+        "> <img src="Images/scissors.jpg" class="image"> </button>
+    <button class="button" onclick="
         playGame('Paper')
-        "> Paper </button>
-    <button onclick="
+        "> <img src="Images/paper.jpg" class="image"> </button>
+    
+    
+    <button class="resetbutton" 
+        onclick="
         
         scoreboard = {
             wins: 0,
@@ -32,6 +36,7 @@
         clean();
 
     "> Reset Game</button>
+    </div>
     <p class="js-scoreboard"> </p>
     <p class="js-result"> </p>
 
