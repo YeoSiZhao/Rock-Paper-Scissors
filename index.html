@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src = "code.js" defer ></script>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        playGame('Rock')
+        "> Rock </button>
+    <button onclick="
+        playGame('Scissors')
+        "> Scissors </button>
+    <button onclick="
+        playGame('Paper')
+        "> Paper </button>
+    <button onclick="
+        
+        scoreboard = {
+            wins: 0,
+            losses: 0,
+            ties: 0 
+        }
+        gameHistory = [];
+        
+        localStorage.setItem('scoreboard', JSON.stringify(scoreboard));
+        localStorage.setItem('gameHistory', JSON.stringify(gameHistory));
+        updateScores();
+        showHistory();
+        clean();
+
+    "> Reset Game</button>
+    <p class="js-scoreboard"> </p>
+    <p class="js-result"> </p>
+
+    <div class="game-history"></div>
+
+</body> 
+</html>
