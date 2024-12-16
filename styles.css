@@ -15,7 +15,7 @@ body {
     grid-template-columns: 150px 150px 150px 150px;
     align-items: center;
 }
-.button {
+.js-rock-button,.js-scissors-button,.js-paper-button {
     border:none;
     background:transparent;
     outline: none;
@@ -35,6 +35,26 @@ td {
     text-align: center;
 }
 
-.resetbutton {
+th:nth-child(1), td:nth-child(1) { 
+    width: 100px; /* Adjust the width of the first column */
+}
+
+th:nth-child(2), td:nth-child(2) { 
+    width: 500px; /* Adjust the width of the second column */
+}
+
+th:nth-child(3), td:nth-child(3) { 
+    width: 120px; /* Adjust the width of the third column */
+}
+
+th:nth-child(4), td:nth-child(4) { 
+    width: 120px; /* Adjust the width of the fourth column */
+}
+
+th:nth-child(5), td:nth-child(5) { 
+    width: 80px; /* Adjust the width of the last column */
+}
+
+.reset-button {
     height: 50px;
 }

@@ -1,3 +1,5 @@
+import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
 let scoreboard = JSON.parse(localStorage.getItem('scoreboard')) || {
     wins: 0,
     losses: 0,
@@ -5,6 +7,35 @@ let scoreboard = JSON.parse(localStorage.getItem('scoreboard')) || {
   };
 
 let gameHistory = JSON.parse(localStorage.getItem('gameHistory')) || [];
+
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+    playGame('Rock');
+});
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+    playGame('Paper');
+});
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+    playGame('Scissors');
+});
+
+document.querySelector('.reset-button').addEventListener('click', () => {
+    scoreboard = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    };
+
+    gameHistory = [];
+
+    localStorage.setItem('scoreboard', JSON.stringify(scoreboard));
+    localStorage.setItem('gameHistory', JSON.stringify(gameHistory));
+
+    updateScores();
+    showHistory();
+    clean();
+});
 
 
 function generateComputerMove() {
@@ -47,6 +78,7 @@ function updateScores(){
 function showResults(playerMove,computerMove,result){
     document.querySelector('.js-result').innerHTML =`You picked ${playerMove}. Computer Picked ${computerMove}. You ${result}.`
 }
+
 function showHistory() {
     
     // Create a table to display the history
@@ -136,8 +168,8 @@ function playGame(playerMove){
 //--------------------------------------------
 
 //Game History
-    const now = new Date().toISOString();
-    record = {
+    const now = dayjs().format('DD MMMM YYYY, h:mm A');
+    let record = {
         Date: now,
         PlayerChoice: playerMove,
         ComputerChoice: computerMove,

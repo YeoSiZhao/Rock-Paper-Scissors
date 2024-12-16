@@ -3,44 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css"> 
-    <script src = "code.js" defer ></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
     <div class="main">
-        <button class="button" onclick="
-        playGame('Rock')
-        "> <img src="Images/rock.jpg" class="image"> </button>
-    <button class="button" onclick="
-        playGame('Scissors')
-        "> <img src="Images/scissors.jpg" class="image"> </button>
-    <button class="button" onclick="
-        playGame('Paper')
-        "> <img src="Images/paper.jpg" class="image"> </button>
+        <button class="js-rock-button"> <img src="Images/rock.jpg" class="image"> </button>
+        <button class="js-scissors-button"> <img src="Images/scissors.jpg" class="image"> </button>
+        <button class="js-paper-button"> <img src="Images/paper.jpg" class="image"> </button>
     
     
-    <button class="resetbutton" 
-        onclick="
-        
-        scoreboard = {
-            wins: 0,
-            losses: 0,
-            ties: 0 
-        }
-        gameHistory = [];
-        
-        localStorage.setItem('scoreboard', JSON.stringify(scoreboard));
-        localStorage.setItem('gameHistory', JSON.stringify(gameHistory));
-        updateScores();
-        showHistory();
-        clean();
-
-    "> Reset Game</button>
+    <button class="reset-button"> Reset Game</button>
     </div>
     <p class="js-scoreboard"> </p>
     <p class="js-result"> </p>
 
     <div class="game-history"></div>
-
+    <script type="module" src="code.js"></script>
 </body> 
 </html>
