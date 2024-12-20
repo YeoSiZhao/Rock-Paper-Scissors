@@ -129,7 +129,7 @@ function playGame(playerMove){
         {
             result = 'lose';
         }
-        else
+        else if (computerMove === 'Scissors')
         {
             result = 'win';
         }
@@ -138,15 +138,15 @@ function playGame(playerMove){
     {
         if (computerMove === 'Rock')
         {
-            result = 'lose';
+            result = 'win';
         }
         else if (computerMove === 'Paper')
         {
             result = 'tie';
         }
-        else
+        else if (computerMove === 'Scissors')
         {
-            result = 'win';
+            result = 'lose';
         }
     }
     else if (playerMove === 'Scissors')
@@ -159,7 +159,7 @@ function playGame(playerMove){
         {
             result = 'win';
         }
-        else
+        else if (computerMove === 'Scissors')
         {
             result = 'tie';
         }
