@@ -6,18 +6,22 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <div class="main">
-        <button class="js-rock-button"> <img src="Images/rock.jpg" class="image"> </button>
-        <button class="js-scissors-button"> <img src="Images/scissors.jpg" class="image"> </button>
-        <button class="js-paper-button"> <img src="Images/paper.jpg" class="image"> </button>
-    
-    
-    <button class="reset-button"> Reset Game</button>
+    <div class="container">
+        <div class="left">
+            <div class="js-result"> </div>
+            <div class="js-scoreboard"> </div>
+            <div class="choices">
+                <button class="js-rock-button"> <img src="Images/rock.jpg" class="image"> </button>
+                <button class="js-paper-button"> <img src="Images/paper.jpg" class="image"> </button>
+                <button class="js-scissors-button"> <img src="Images/scissors.jpg" class="image"> </button>
+            </div>
+            <button class="reset-button"> Reset Game</button>
+        </div>
+        <div class="right">
+            <div class="game-history"></div>
+        </div>
     </div>
-    <p class="js-scoreboard"> </p>
-    <p class="js-result"> </p>
 
-    <div class="game-history"></div>
     <script type="module" src="code.js"></script>
 </body> 
 </html>

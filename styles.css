@@ -2,6 +2,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .image {
     width: 130px;
     background:transparent;
@@ -10,11 +11,59 @@ body {
     cursor: pointer;
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 150px 150px 150px 150px;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  height: 100vh; /* Full viewport height */
+}
+
+.choices {
+    position: absolute;
+    top:65%;
+    left:8%;
     align-items: center;
 }
+
+.left {
+    text-align: center;
+}
+
+.reset-button{
+    width:100px;
+    position: absolute;
+    left:21.5%;
+    top: 88%;
+    border-radius: 5px;
+    border: none;
+    color:white;
+    background-color: black;
+    font-size: bold;
+    cursor: pointer;
+}
+
+.name {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.generated-pictures {
+    margin: 10px;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.js-result {
+    margin-bottom: 20px;
+}
+.js-scoreboard {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+
 .js-rock-button,.js-scissors-button,.js-paper-button {
     border:none;
     background:transparent;
@@ -24,7 +73,7 @@ body {
 table,th,td {
     border-collapse: collapse;
     border: 1px solid;
-    width: 50%;
+    width: 100%;
 }
 
 th,td {

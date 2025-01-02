@@ -39,7 +39,7 @@ document.querySelector('.reset-button').addEventListener('click', () => {
 
 
 function generateComputerMove() {
-    let computerMove = '';
+    let computerMove;
     const randomNum = Math.random();
     if (randomNum <= 0.33)
     {
@@ -57,15 +57,15 @@ function generateComputerMove() {
 }
 
 function calculateScores(result) {
-    if (result === 'win')
+    if (result === 'Win')
     {
         scoreboard.wins += 1;
     }
-    else if (result === 'lose')
+    else if (result === 'Lose')
     {
         scoreboard.losses += 1;
     }
-    else if (result === 'tie')
+    else if (result === 'Tie')
     {
         scoreboard.ties += 1;
     }
@@ -76,7 +76,7 @@ function updateScores(){
 }
 
 function showResults(playerMove,computerMove,result){
-    document.querySelector('.js-result').innerHTML =`You picked ${playerMove}. Computer Picked ${computerMove}. You ${result}.`
+    document.querySelector('.js-result').innerHTML =`<div class="name"> Computer </div> <div class="generated-pictures"> <img class="image" src="Images/${computerMove}.jpg"> </br> <img class="image" src="Images/${playerMove}.jpg"> </div> <div class="name"> You </div> <div class="result"> ${result}. </div>`
 }
 
 function showHistory() {
@@ -123,45 +123,45 @@ function playGame(playerMove){
     {
         if (computerMove === 'Rock')
         {
-            result = 'tie';
+            result = 'Tie';
         }
         else if (computerMove === 'Paper')
         {
-            result = 'lose';
+            result = 'Lose';
         }
         else if (computerMove === 'Scissors')
         {
-            result = 'win';
+            result = 'Win';
         }
     }
     else if (playerMove === 'Paper')
     {
         if (computerMove === 'Rock')
         {
-            result = 'win';
+            result = 'Win';
         }
         else if (computerMove === 'Paper')
         {
-            result = 'tie';
+            result = 'Tie';
         }
         else if (computerMove === 'Scissors')
         {
-            result = 'lose';
+            result = 'Lose';
         }
     }
     else if (playerMove === 'Scissors')
     {
         if (computerMove === 'Rock')
         {
-            result = 'lose';
+            result = 'Lose';
         }
         else if (computerMove === 'Paper')
         {
-            result = 'win';
+            result = 'Win';
         }
         else if (computerMove === 'Scissors')
         {
-            result = 'tie';
+            result = 'Tie';
         }
     }   
     calculateScores(result); 
