@@ -76,7 +76,9 @@ function updateScores(){
 }
 
 function showResults(playerMove,computerMove,result){
-    document.querySelector('.js-result').innerHTML =`<div class="name"> Computer </div> <div class="generated-pictures"> <img class="image" src="Images/${computerMove}.jpg"> </br> <img class="image" src="Images/${playerMove}.jpg"> </div> <div class="name"> You </div> <div class="result"> ${result}. </div>`
+    let resultHTML = `<div class="name"> Computer </div> <div class="generated-pictures"> <img class="image" src="Images/${computerMove}.jpg"> </br> <img class="image" src="Images/${playerMove}.jpg"> </div> <div class="name"> You </div> <div class="result"> ${result}. </div>`
+    console.log(resultHTML);
+    document.querySelector('.js-result').innerHTML = resultHTML;
 }
 
 function showHistory() {
